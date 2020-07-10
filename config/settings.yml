@@ -1,0 +1,9 @@
+office_365_api:
+    TENANT: "common"
+    REPLY_URL: "http://localhost:3000/sessions/callback"
+    AUTHORIZE_ENDPOINT: "https://login.microsoftonline.com/common/oauth2/authorize"
+    LOGOUT_ENDPOINT: "https://login.microsoftonline.com/common/oauth2/logout"
+    GRAPH_RESOURCE: "https://graph.microsoft.com"
+    CONTEXT_PATH: "login.microsoftonline.com"
+    CONTENT_TYPE: "application/json;odata.metadata=minimal;odata.streaming=true"
+    ADAL_SUCCESS: "ADAL::SuccessResponse"
