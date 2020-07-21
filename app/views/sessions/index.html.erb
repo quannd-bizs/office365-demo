@@ -1,0 +1,17 @@
+<h1>Sessions#index</h1>
+<% if @user.nil? %>
+  <%= link_to "Login via office365 account", sessions_path, method: :post %>
+<% else %>
+  <%= link_to "Back to homepage", root_path %>
+  <p>Welcome <h3><%= @user.name %></h3> with <h3><%= @user.email %></h3> </p>
+  <% if @token %>
+    Your new access token is: <h3><%= @token %></h3>
+  <% end %>
+  <form action="<%= sessions_send_mail_path %>" method="POST">
+    <h1><%= @message if @message %></h1>
+    <input type="text" name="receiver" />
+    <button type="submit">Send mail</button>
+  </form>
+  <%= link_to "Renew token", sessions_path, method: :put %>
+  <%= link_to "Logout", sessions_path, method: :delete %>
+<% end %>
