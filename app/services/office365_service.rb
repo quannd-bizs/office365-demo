@@ -7,3 +7,4 @@ class Office365Service
   
     def initialize
     end
+  end
